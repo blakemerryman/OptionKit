@@ -10,6 +10,9 @@
 		253D96BE1A7A9B8900578217 /* BMParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 253D96BD1A7A9B8900578217 /* BMParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		253D96C41A7A9B8900578217 /* BMParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253D96B81A7A9B8900578217 /* BMParse.framework */; };
 		253D96CB1A7A9B8900578217 /* BMParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D96CA1A7A9B8900578217 /* BMParseTests.swift */; };
+		253D96D71A7A9B9D00578217 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D96D41A7A9B9D00578217 /* Option.swift */; };
+		253D96D81A7A9B9D00578217 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D96D51A7A9B9D00578217 /* Parser.swift */; };
+		253D96D91A7A9B9D00578217 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D96D61A7A9B9D00578217 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		253D96C31A7A9B8900578217 /* BMParseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMParseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		253D96C91A7A9B8900578217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		253D96CA1A7A9B8900578217 /* BMParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMParseTests.swift; sourceTree = "<group>"; };
+		253D96D41A7A9B9D00578217 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		253D96D51A7A9B9D00578217 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		253D96D61A7A9B9D00578217 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,9 @@
 		253D96BA1A7A9B8900578217 /* BMParse */ = {
 			isa = PBXGroup;
 			children = (
-				253D96BD1A7A9B8900578217 /* BMParse.h */,
+				253D96D41A7A9B9D00578217 /* Option.swift */,
+				253D96D61A7A9B9D00578217 /* Result.swift */,
+				253D96D51A7A9B9D00578217 /* Parser.swift */,
 				253D96BB1A7A9B8900578217 /* Supporting Files */,
 			);
 			path = BMParse;
@@ -80,6 +88,7 @@
 		253D96BB1A7A9B8900578217 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				253D96BD1A7A9B8900578217 /* BMParse.h */,
 				253D96BC1A7A9B8900578217 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -209,6 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253D96D91A7A9B9D00578217 /* Result.swift in Sources */,
+				253D96D81A7A9B9D00578217 /* Parser.swift in Sources */,
+				253D96D71A7A9B9D00578217 /* Option.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
