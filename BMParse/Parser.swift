@@ -21,16 +21,17 @@ public class Parser {
     /// its arguments parameter. We should always get at least one argument from Process.arguments
     /// (zeroth argument should be equivalent to /.../path/to/file/file.swift).
     ///
-    /// :param:   arguments Array of Strings that contain the arguments to be parsed
-    /// :returns: Parsed results as an array of Result objects
+    /// - parameter   arguments: Array of Strings that contain the arguments to be parsed
+    /// - returns: Parsed results as an array of Result objects
     
-    public func parseArguments(var arguments: [String]!) -> [Result]? {
+    public func parseArguments(arguments: [String]!) -> [Result]? {
 
+        var mutableArguments = arguments
         var results: [Result]?
         
-        if arguments.count > 1 {
-            arguments.removeAtIndex(0) // Trim Zeroth argument to isolate user's input.
-            results = processUserInput(arguments, withParserOptions: parserOptions)
+        if mutableArguments.count > 1 {
+            mutableArguments.removeAtIndex(0) // Trim Zeroth argument to isolate user's input.
+            results = processUserInput(mutableArguments, withParserOptions: parserOptions)
             performCompletionHandlersForOptions(self.parserOptions, withResults: results)
         }
         
@@ -48,9 +49,9 @@ public class Parser {
     /// - Look for flags. When found, save flag and any trailing args.
     /// - Store them in array of Results
     ///
-    /// :param: userInput  Array of Strings representing the user's input
-    /// :param: options    Array of Options that were used to initialize the Parser
-    /// :returns: Array of processed Result objects
+    /// - parameter userInput:  Array of Strings representing the user's input
+    /// - parameter options:    Array of Options that were used to initialize the Parser
+    /// - returns: Array of processed Result objects
     
     private func processUserInput(userInput: [String]!, withParserOptions options: [Option]!) -> [Result] {
         
