@@ -8,105 +8,133 @@
 
 import Foundation
 
-public class Parser {
+// MARK: - Public API
 
-    // MARK: - Public API
+/// Command line option parser.
+public struct Parser {
     
-    public init(options: [Option]!) {
+    /**
+     Designated initializer.
+     
+     - parameter options: Array of Options to attempting parsing.
+     */
+    public init(options: [Option]) {
         parserOptions = options
     }
     
-    
-    /// Parses the arguments. This method anticipates being passed an unaltered Process.arguments as
-    /// its arguments parameter. We should always get at least one argument from Process.arguments
-    /// (zeroth argument should be equivalent to /.../path/to/file/file.swift).
-    ///
-    /// - parameter   arguments: Array of Strings that contain the arguments to be parsed
-    /// - returns: Parsed results as an array of Result objects
-    
-    public func parseArguments(arguments: [String]!) -> [Result]? {
-
-        var mutableArguments = arguments
-        var results: [Result]?
+    /**
+     Parses options and their arguments. This method anticipates being passed an unaltered 
+     `Process.arguments` as its arguments parameter. We should always get at least one argument 
+     from `Process.arguments` (zeroth argument should be equivalent to `/.../path/to/file/file.swift`).
+     
+     - parameter processArguments: Should be the standard input from `Process.arguments`.
+     - returns: Parsed options and their arguments in the form of Results.
+     */
+    public func parseProcessArguments(processArguments: [String]) -> [Result]? {
         
-        if mutableArguments.count > 1 {
-            mutableArguments.removeAtIndex(0) // Trim Zeroth argument to isolate user's input.
-            results = processUserInput(mutableArguments, withParserOptions: parserOptions)
-            performCompletionHandlersForOptions(self.parserOptions, withResults: results)
+        if processArguments.count < 1 {
+            return nil
         }
+        
+        var mutableArguments = processArguments
+        mutableArguments.removeAtIndex(0) // Trim Zeroth argument to isolate user's input.
+        
+        let results = processUserInput(mutableArguments, withParserOptions: parserOptions)
+        performCompletionHandlersForOptions(self.parserOptions, withResults: results)
         
         return results
     }
     
-    // MARK: - Private API
-    
-    private let parserOptions: [Option]!
-    
-    
-    /// Processes the user's input based on the Parser's options.
-    ///
-    /// - Iterate through user's input
-    /// - Look for flags. When found, save flag and any trailing args.
-    /// - Store them in array of Results
-    ///
-    /// - parameter userInput:  Array of Strings representing the user's input
-    /// - parameter options:    Array of Options that were used to initialize the Parser
-    /// - returns: Array of processed Result objects
-    
-    private func processUserInput(userInput: [String]!, withParserOptions options: [Option]!) -> [Result] {
+    /**
+     Constructor method that handles initializing and parsing the process arguments.
+     
+     - parameter options: Array of Options to attempting parsing.
+     - parameter processArguments: Should be the standard input from `Process.arguments`.
+     - returns: Parsed options and their arguments in the form of Results.
+     */
+    public static func parseProcessArguments(processArguments: [String], againstOptions options: [Option]) -> [Result]? {
         
-        var processedResults = [Result]()
+        return Parser(options: options).parseProcessArguments(processArguments)
+    }
+    
+    // MARK: Private: Stored Properties
+    
+    /// Options that have been parsed.
+    let parserOptions: [Option]
+    
+}
+
+// MARK: - Private API
+
+extension Parser {
+    
+    /**
+     Processes the user's input based on the Parser's options.
+     
+     - Iterate through user's input
+     - Look for flags. When found, save flag and any trailing args.
+     - Store them in array of Results
+     
+     - parameter userInput: Array of Strings representing the user's input
+     - parameter options: Array of Options that were used to initialize the Parser
+     - returns: Array of processed Result objects
+     */
+    func processUserInput(userInput: [String], withParserOptions options: [Option]) -> [Result] {
+
+        // e.g. ["--optA", "one", "two", "three", "--optB", "four", "five", "six"]
+
+        /// Helper block that saves a result and clears the buffers.
+        let processBuffers = {
+            
+            (inout optionBuffer: Option?, inout argumentBuffer: [String], inout results: [Result]) in
+            
+            if let option = optionBuffer {
+                results.append( Result(option: option, arguments: argumentBuffer) )
+                argumentBuffer.removeAll(keepCapacity: false)
+                optionBuffer = nil
+            }
+        }
+        
+        var processedResults      = [Result]()
         var optionBuffer: Option? = nil
-        var argumentBuffer = [String]()
+        var argumentBuffer        = [String]()
         
-        for input in userInput as [String] {
+        for input in userInput {
             
-            if let foundOption = checkInput(input, againstOptions: options) {
-                if optionBuffer != nil {
-                    let processedResult = Result(flag: optionBuffer!, arguments: argumentBuffer)
-                    processedResults.append(processedResult)
-                    optionBuffer = nil
-                    argumentBuffer.removeAll(keepCapacity: false)
-                }
-                optionBuffer = foundOption
-            }
-            else {
+            guard let option = checkInput(input, againstOptions: options) else {
                 argumentBuffer.append(input)
+                continue
             }
+            
+            processBuffers(&optionBuffer, &argumentBuffer, &processedResults)
+            optionBuffer = option
         }
         
-        // Make sure the buffers have been cleared...
-        if optionBuffer != nil || argumentBuffer.isEmpty == false {
-            
-            let aResult = Result(flag: optionBuffer, arguments: argumentBuffer)
-            processedResults.append(aResult)
-        }
+        processBuffers(&optionBuffer, &argumentBuffer, &processedResults)
         
         return processedResults
     }
     
-    private func checkInput(input: String!, againstOptions options: [Option]!) -> Option? {
+    /// Checks if the input string matches any of the options
+    func checkInput(input: String, againstOptions options: [Option]) -> Option? {
         
-        for option in options as [Option] {
-            let isFlag = option.checkIfOption(input)
-            
-            if isFlag {
+        for option in options as [Option]
+            where option.checkIfOption(input) {
                 return option
-            }
         }
+        
         return nil
     }
     
-    private func performCompletionHandlersForOptions(options: [Option]!, withResults results: [Result]!) {
-        for result in results {
-            for option in options {
-                if result.flag == option {
-                    option.completionHandler(result, nil)
-                }
+    func performCompletionHandlersForOptions(options: [Option], withResults results: [Result]) {
+        
+        for option in options {
+            if let matchingResult = results.filter({ $0.option == option }).first {
+                option.completionHandler?(result: matchingResult, error: nil)
             }
         }
     }
-    
+
 }
 
 

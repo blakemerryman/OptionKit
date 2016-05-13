@@ -6,11 +6,13 @@
 //  Copyright (c) 2016 Blake Merryman. All rights reserved.
 //
 
-import Foundation
-
+/// The result of parsing a command line option.
 public struct Result {
     
-    public let flag: Option?
+    /// The Option that was parsed.
+    public let option: Option
+    
+    /// The arguments that were parsed along with the Option, if any.
     public let arguments: [String]?
     
 }
