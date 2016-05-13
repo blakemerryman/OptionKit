@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "253D96B71A7A9B8900578217"
-               BuildableName = "BMParse.framework"
-               BlueprintName = "BMParse"
-               ReferencedContainer = "container:BMParse.xcodeproj">
+               BuildableName = "OptionKit.framework"
+               BlueprintName = "OptionKit"
+               ReferencedContainer = "container:OptionKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "253D96C21A7A9B8900578217"
-               BuildableName = "BMParseTests.xctest"
-               BlueprintName = "BMParseTests"
-               ReferencedContainer = "container:BMParse.xcodeproj">
+               BlueprintIdentifier = "2589B2641CE562F70054F317"
+               BuildableName = "OptionKitTests.xctest"
+               BlueprintName = "OptionKitTests"
+               ReferencedContainer = "container:OptionKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,10 +46,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "253D96C21A7A9B8900578217"
-               BuildableName = "BMParseTests.xctest"
-               BlueprintName = "BMParseTests"
-               ReferencedContainer = "container:BMParse.xcodeproj">
+               BlueprintIdentifier = "2589B2641CE562F70054F317"
+               BuildableName = "OptionKitTests.xctest"
+               BlueprintName = "OptionKitTests"
+               ReferencedContainer = "container:OptionKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "253D96B71A7A9B8900578217"
-            BuildableName = "BMParse.framework"
-            BlueprintName = "BMParse"
-            ReferencedContainer = "container:BMParse.xcodeproj">
+            BuildableName = "OptionKit.framework"
+            BlueprintName = "OptionKit"
+            ReferencedContainer = "container:OptionKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "253D96B71A7A9B8900578217"
-            BuildableName = "BMParse.framework"
-            BlueprintName = "BMParse"
-            ReferencedContainer = "container:BMParse.xcodeproj">
+            BuildableName = "OptionKit.framework"
+            BlueprintName = "OptionKit"
+            ReferencedContainer = "container:OptionKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -97,9 +97,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "253D96B71A7A9B8900578217"
-            BuildableName = "BMParse.framework"
-            BlueprintName = "BMParse"
-            ReferencedContainer = "container:BMParse.xcodeproj">
+            BuildableName = "OptionKit.framework"
+            BlueprintName = "OptionKit"
+            ReferencedContainer = "container:OptionKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

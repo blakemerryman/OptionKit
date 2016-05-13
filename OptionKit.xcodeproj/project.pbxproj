@@ -7,34 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		253D96BE1A7A9B8900578217 /* BMParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 253D96BD1A7A9B8900578217 /* BMParse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		253D96C41A7A9B8900578217 /* BMParse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253D96B81A7A9B8900578217 /* BMParse.framework */; };
-		253D96CB1A7A9B8900578217 /* BMParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D96CA1A7A9B8900578217 /* BMParseTests.swift */; };
-		253D96D71A7A9B9D00578217 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D96D41A7A9B9D00578217 /* Option.swift */; };
-		253D96D81A7A9B9D00578217 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D96D51A7A9B9D00578217 /* Parser.swift */; };
-		253D96D91A7A9B9D00578217 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253D96D61A7A9B9D00578217 /* Result.swift */; };
+		2589B24F1CE55D280054F317 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589B24A1CE55D280054F317 /* Option.swift */; };
+		2589B2501CE55D280054F317 /* OptionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2589B24B1CE55D280054F317 /* OptionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2589B2511CE55D280054F317 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589B24C1CE55D280054F317 /* Parser.swift */; };
+		2589B2521CE55D280054F317 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589B24D1CE55D280054F317 /* Result.swift */; };
+		2589B2601CE5615B0054F317 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2589B25F1CE5615B0054F317 /* Info.plist */; };
+		2589B2681CE562F70054F317 /* OptionKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589B2671CE562F70054F317 /* OptionKitTests.swift */; };
+		2589B26A1CE562F70054F317 /* OptionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253D96B81A7A9B8900578217 /* OptionKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		253D96C51A7A9B8900578217 /* PBXContainerItemProxy */ = {
+		2589B26B1CE562F70054F317 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 253D96AF1A7A9B8900578217 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 253D96B71A7A9B8900578217;
-			remoteInfo = BMParse;
+			remoteInfo = OptionKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		253D96B81A7A9B8900578217 /* BMParse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMParse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		253D96BC1A7A9B8900578217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		253D96BD1A7A9B8900578217 /* BMParse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMParse.h; sourceTree = "<group>"; };
-		253D96C31A7A9B8900578217 /* BMParseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMParseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		253D96C91A7A9B8900578217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		253D96CA1A7A9B8900578217 /* BMParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMParseTests.swift; sourceTree = "<group>"; };
-		253D96D41A7A9B9D00578217 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
-		253D96D51A7A9B9D00578217 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		253D96D61A7A9B9D00578217 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		253D96B81A7A9B8900578217 /* OptionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OptionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2589B24A1CE55D280054F317 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		2589B24B1CE55D280054F317 /* OptionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionKit.h; sourceTree = "<group>"; };
+		2589B24C1CE55D280054F317 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		2589B24D1CE55D280054F317 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2589B25F1CE5615B0054F317 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2589B2651CE562F70054F317 /* OptionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2589B2671CE562F70054F317 /* OptionKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionKitTests.swift; sourceTree = "<group>"; };
+		2589B2691CE562F70054F317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,11 +46,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		253D96C01A7A9B8900578217 /* Frameworks */ = {
+		2589B2621CE562F70054F317 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253D96C41A7A9B8900578217 /* BMParse.framework in Frameworks */,
+				2589B26A1CE562F70054F317 /* OptionKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,8 +60,8 @@
 		253D96AE1A7A9B8900578217 = {
 			isa = PBXGroup;
 			children = (
-				253D96BA1A7A9B8900578217 /* BMParse */,
-				253D96C71A7A9B8900578217 /* BMParseTests */,
+				2589B2481CE55D280054F317 /* OptionKit */,
+				2589B2661CE562F70054F317 /* OptionKitTests */,
 				253D96B91A7A9B8900578217 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,45 +69,45 @@
 		253D96B91A7A9B8900578217 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				253D96B81A7A9B8900578217 /* BMParse.framework */,
-				253D96C31A7A9B8900578217 /* BMParseTests.xctest */,
+				253D96B81A7A9B8900578217 /* OptionKit.framework */,
+				2589B2651CE562F70054F317 /* OptionKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		253D96BA1A7A9B8900578217 /* BMParse */ = {
+		2589B2481CE55D280054F317 /* OptionKit */ = {
 			isa = PBXGroup;
 			children = (
-				253D96D41A7A9B9D00578217 /* Option.swift */,
-				253D96D61A7A9B9D00578217 /* Result.swift */,
-				253D96D51A7A9B9D00578217 /* Parser.swift */,
-				253D96BB1A7A9B8900578217 /* Supporting Files */,
+				2589B24A1CE55D280054F317 /* Option.swift */,
+				2589B24C1CE55D280054F317 /* Parser.swift */,
+				2589B24D1CE55D280054F317 /* Result.swift */,
+				2589B2531CE55D360054F317 /* Supporting Files */,
 			);
-			path = BMParse;
-			sourceTree = "<group>";
+			path = OptionKit;
+			sourceTree = SOURCE_ROOT;
 		};
-		253D96BB1A7A9B8900578217 /* Supporting Files */ = {
+		2589B2531CE55D360054F317 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				253D96BD1A7A9B8900578217 /* BMParse.h */,
-				253D96BC1A7A9B8900578217 /* Info.plist */,
+				2589B24B1CE55D280054F317 /* OptionKit.h */,
+				2589B25F1CE5615B0054F317 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		253D96C71A7A9B8900578217 /* BMParseTests */ = {
+		2589B2661CE562F70054F317 /* OptionKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				253D96CA1A7A9B8900578217 /* BMParseTests.swift */,
-				253D96C81A7A9B8900578217 /* Supporting Files */,
+				2589B2671CE562F70054F317 /* OptionKitTests.swift */,
+				2589B2701CE563040054F317 /* Supporting Files */,
 			);
-			path = BMParseTests;
+			path = OptionKitTests;
 			sourceTree = "<group>";
 		};
-		253D96C81A7A9B8900578217 /* Supporting Files */ = {
+		2589B2701CE563040054F317 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				253D96C91A7A9B8900578217 /* Info.plist */,
+				2589B2691CE562F70054F317 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -118,16 +119,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253D96BE1A7A9B8900578217 /* BMParse.h in Headers */,
+				2589B2501CE55D280054F317 /* OptionKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		253D96B71A7A9B8900578217 /* BMParse */ = {
+		253D96B71A7A9B8900578217 /* OptionKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 253D96CE1A7A9B8900578217 /* Build configuration list for PBXNativeTarget "BMParse" */;
+			buildConfigurationList = 253D96CE1A7A9B8900578217 /* Build configuration list for PBXNativeTarget "OptionKit" */;
 			buildPhases = (
 				253D96B31A7A9B8900578217 /* Sources */,
 				253D96B41A7A9B8900578217 /* Frameworks */,
@@ -138,27 +139,27 @@
 			);
 			dependencies = (
 			);
-			name = BMParse;
+			name = OptionKit;
 			productName = BMParse;
-			productReference = 253D96B81A7A9B8900578217 /* BMParse.framework */;
+			productReference = 253D96B81A7A9B8900578217 /* OptionKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		253D96C21A7A9B8900578217 /* BMParseTests */ = {
+		2589B2641CE562F70054F317 /* OptionKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 253D96D11A7A9B8900578217 /* Build configuration list for PBXNativeTarget "BMParseTests" */;
+			buildConfigurationList = 2589B26D1CE562F70054F317 /* Build configuration list for PBXNativeTarget "OptionKitTests" */;
 			buildPhases = (
-				253D96BF1A7A9B8900578217 /* Sources */,
-				253D96C01A7A9B8900578217 /* Frameworks */,
-				253D96C11A7A9B8900578217 /* Resources */,
+				2589B2611CE562F70054F317 /* Sources */,
+				2589B2621CE562F70054F317 /* Frameworks */,
+				2589B2631CE562F70054F317 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				253D96C61A7A9B8900578217 /* PBXTargetDependency */,
+				2589B26C1CE562F70054F317 /* PBXTargetDependency */,
 			);
-			name = BMParseTests;
-			productName = BMParseTests;
-			productReference = 253D96C31A7A9B8900578217 /* BMParseTests.xctest */;
+			name = OptionKitTests;
+			productName = OptionKitTests;
+			productReference = 2589B2651CE562F70054F317 /* OptionKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -175,12 +176,12 @@
 					253D96B71A7A9B8900578217 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					253D96C21A7A9B8900578217 = {
-						CreatedOnToolsVersion = 6.1.1;
+					2589B2641CE562F70054F317 = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 253D96B21A7A9B8900578217 /* Build configuration list for PBXProject "BMParse" */;
+			buildConfigurationList = 253D96B21A7A9B8900578217 /* Build configuration list for PBXProject "OptionKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -192,8 +193,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				253D96B71A7A9B8900578217 /* BMParse */,
-				253D96C21A7A9B8900578217 /* BMParseTests */,
+				253D96B71A7A9B8900578217 /* OptionKit */,
+				2589B2641CE562F70054F317 /* OptionKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -203,10 +204,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2589B2601CE5615B0054F317 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		253D96C11A7A9B8900578217 /* Resources */ = {
+		2589B2631CE562F70054F317 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,27 +222,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253D96D91A7A9B9D00578217 /* Result.swift in Sources */,
-				253D96D81A7A9B9D00578217 /* Parser.swift in Sources */,
-				253D96D71A7A9B9D00578217 /* Option.swift in Sources */,
+				2589B2521CE55D280054F317 /* Result.swift in Sources */,
+				2589B24F1CE55D280054F317 /* Option.swift in Sources */,
+				2589B2511CE55D280054F317 /* Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		253D96BF1A7A9B8900578217 /* Sources */ = {
+		2589B2611CE562F70054F317 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253D96CB1A7A9B8900578217 /* BMParseTests.swift in Sources */,
+				2589B2681CE562F70054F317 /* OptionKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		253D96C61A7A9B8900578217 /* PBXTargetDependency */ = {
+		2589B26C1CE562F70054F317 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 253D96B71A7A9B8900578217 /* BMParse */;
-			targetProxy = 253D96C51A7A9B8900578217 /* PBXContainerItemProxy */;
+			target = 253D96B71A7A9B8900578217 /* OptionKit */;
+			targetProxy = 2589B26B1CE562F70054F317 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -336,11 +338,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = BMParse/Info.plist;
+				INFOPLIST_FILE = OptionKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blakemerryman.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OptionKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -354,45 +356,43 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = BMParse/Info.plist;
+				INFOPLIST_FILE = OptionKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blakemerryman.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OptionKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		253D96D21A7A9B8900578217 /* Debug */ = {
+		2589B26E1CE562F70054F317 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BMParseTests/Info.plist;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = OptionKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.blakemerryman.$(PRODUCT_NAME:rfc1034identifier)";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blakemerryman.OptionKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		253D96D31A7A9B8900578217 /* Release */ = {
+		2589B26F1CE562F70054F317 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BMParseTests/Info.plist;
+				COPY_PHASE_STRIP = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = OptionKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.blakemerryman.$(PRODUCT_NAME:rfc1034identifier)";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blakemerryman.OptionKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -400,7 +400,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		253D96B21A7A9B8900578217 /* Build configuration list for PBXProject "BMParse" */ = {
+		253D96B21A7A9B8900578217 /* Build configuration list for PBXProject "OptionKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				253D96CC1A7A9B8900578217 /* Debug */,
@@ -409,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		253D96CE1A7A9B8900578217 /* Build configuration list for PBXNativeTarget "BMParse" */ = {
+		253D96CE1A7A9B8900578217 /* Build configuration list for PBXNativeTarget "OptionKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				253D96CF1A7A9B8900578217 /* Debug */,
@@ -418,14 +418,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		253D96D11A7A9B8900578217 /* Build configuration list for PBXNativeTarget "BMParseTests" */ = {
+		2589B26D1CE562F70054F317 /* Build configuration list for PBXNativeTarget "OptionKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				253D96D21A7A9B8900578217 /* Debug */,
-				253D96D31A7A9B8900578217 /* Release */,
+				2589B26E1CE562F70054F317 /* Debug */,
+				2589B26F1CE562F70054F317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
