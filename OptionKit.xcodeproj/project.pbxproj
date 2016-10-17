@@ -174,9 +174,11 @@
 				TargetAttributes = {
 					253D96B71A7A9B8900578217 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
 					};
 					2589B2641CE562F70054F317 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -342,6 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blakemerryman.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OptionKit;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -360,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blakemerryman.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OptionKit;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -376,6 +380,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.blakemerryman.OptionKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -392,6 +397,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.blakemerryman.OptionKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -423,6 +429,7 @@
 				2589B26F1CE562F70054F317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,13 +13,13 @@ class ParserTests: XCTestCase {
     
     // MARK: - Test Data
     
-    private enum TestInput {
+    fileprivate enum TestInput {
         static let A = ["/path/to/file.swift","--optA","argument"]
         static let B = ["/path/to/file.swift", "--optA", "one", "two", "three", "--optB", "four", "five", "six"]
         static let C = ["/path/to/file.swift", "--optA", "--optB", "four", "five", "six"]
     }
     
-    private enum TestOption {
+    fileprivate enum TestOption {
         static let A = Option(longFlag: "--optA", shortFlag: "-a", completionHandler: nil)
         static let B = Option(longFlag: "--optB", shortFlag: "-b", completionHandler: nil)
     }
@@ -48,13 +48,13 @@ class ParserTests: XCTestCase {
             return XCTFail()
         }
         
-        guard let result = results.first where results.count == 1 else {
+        guard let result = results.first , results.count == 1 else {
             return XCTFail()
         }
         
         XCTAssert(result.option == TestOption.A)
         
-        guard let argument = result.arguments?.first where result.arguments!.count == 1 else {
+        guard let argument = result.arguments?.first , result.arguments!.count == 1 else {
             return XCTFail()
         }
         
@@ -65,7 +65,7 @@ class ParserTests: XCTestCase {
     func testParseTestInputB() {
         
         guard let results = Parser.parseProcessArguments(TestInput.B, againstOptions: [ TestOption.A, TestOption.B ])
-            where results.count == 2 else {
+            , results.count == 2 else {
                 return XCTFail()
         }
         
@@ -86,7 +86,7 @@ class ParserTests: XCTestCase {
     func testParseTestInputC() {
         
         guard let results = Parser.parseProcessArguments(TestInput.C, againstOptions: [ TestOption.A, TestOption.B ])
-            where results.count == 2 else {
+            , results.count == 2 else {
                 return XCTFail()
         }
         

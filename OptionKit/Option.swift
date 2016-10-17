@@ -12,7 +12,7 @@
  - parameter result: The calculated result that contains an Option and any found argument strings.
  - parameter error: Passes along any parsing error information.
 */
-public typealias OptionCompletionBlock = (result: Result?, error: NSError?) -> ()
+public typealias OptionCompletionBlock = (_ result: Result?, _ error: NSError?) -> ()
 
 /// A command line option.
 public struct Option: Equatable {
@@ -32,7 +32,7 @@ public struct Option: Equatable {
      - parameter string: A possible option that was found.
      - returns: Boolean value indicating whether a possible option is actually an option or not.
      */
-    public func checkIfOption(possibleFlag: String) -> Bool {
+    public func checkIfOption(_ possibleFlag: String) -> Bool {
         
         return (possibleFlag == longFlag) || (possibleFlag == shortFlag)
     }
