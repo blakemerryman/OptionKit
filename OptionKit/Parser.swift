@@ -30,14 +30,14 @@ public struct Parser {
      - parameter processArguments: Should be the standard input from `Process.arguments`.
      - returns: Parsed options and their arguments in the form of Results.
      */
-    public func parseProcessArguments(processArguments: [String]) -> [Result]? {
+    public func parseProcessArguments(_ processArguments: [String]) -> [Result]? {
         
         if processArguments.count < 1 {
             return nil
         }
         
         var mutableArguments = processArguments
-        mutableArguments.removeAtIndex(0) // Trim Zeroth argument to isolate user's input.
+        mutableArguments.remove(at: 0) // Trim Zeroth argument to isolate user's input.
         
         let results = processUserInput(mutableArguments, withParserOptions: parserOptions)
         performCompletionHandlersForOptions(self.parserOptions, withResults: results)
@@ -52,7 +52,7 @@ public struct Parser {
      - parameter processArguments: Should be the standard input from `Process.arguments`.
      - returns: Parsed options and their arguments in the form of Results.
      */
-    public static func parseProcessArguments(processArguments: [String], againstOptions options: [Option]) -> [Result]? {
+    public static func parseProcessArguments(_ processArguments: [String], againstOptions options: [Option]) -> [Result]? {
         
         return Parser(options: options).parseProcessArguments(processArguments)
     }
@@ -79,18 +79,18 @@ extension Parser {
      - parameter options: Array of Options that were used to initialize the Parser
      - returns: Array of processed Result objects
      */
-    func processUserInput(userInput: [String], withParserOptions options: [Option]) -> [Result] {
+    func processUserInput(_ userInput: [String], withParserOptions options: [Option]) -> [Result] {
 
         // e.g. ["--optA", "one", "two", "three", "--optB", "four", "five", "six"]
 
         /// Helper block that saves a result and clears the buffers.
         let processBuffers = {
             
-            (inout optionBuffer: Option?, inout argumentBuffer: [String], inout results: [Result]) in
+            (optionBuffer: inout Option?, argumentBuffer: inout [String], results: inout [Result]) in
             
             if let option = optionBuffer {
                 results.append( Result(option: option, arguments: argumentBuffer) )
-                argumentBuffer.removeAll(keepCapacity: false)
+                argumentBuffer.removeAll(keepingCapacity: false)
                 optionBuffer = nil
             }
         }
@@ -116,7 +116,7 @@ extension Parser {
     }
     
     /// Checks if the input string matches any of the options
-    func checkInput(input: String, againstOptions options: [Option]) -> Option? {
+    func checkInput(_ input: String, againstOptions options: [Option]) -> Option? {
         
         for option in options as [Option]
             where option.checkIfOption(input) {
@@ -126,11 +126,11 @@ extension Parser {
         return nil
     }
     
-    func performCompletionHandlersForOptions(options: [Option], withResults results: [Result]) {
+    func performCompletionHandlersForOptions(_ options: [Option], withResults results: [Result]) {
         
         for option in options {
             if let matchingResult = results.filter({ $0.option == option }).first {
-                option.completionHandler?(result: matchingResult, error: nil)
+                option.completionHandler?(matchingResult, nil)
             }
         }
     }
